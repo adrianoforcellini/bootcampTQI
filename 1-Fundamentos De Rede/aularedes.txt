@@ -1,0 +1,127 @@
+10.0.0.177 10.0.0.118 172.17.0.1 
+127.0.1.1
+
+  ----Informaçoes DNS PUDIM.COM---- 
+
+
+; <<>> DiG 9.16.8-Ubuntu <<>> host www.pudim.com.br
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 2131
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;host.				IN	A
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: sex out 08 10:31:36 -03 2021
+;; MSG SIZE  rcvd: 33
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30322
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;www.pudim.com.br.		IN	A
+
+;; ANSWER SECTION:
+www.pudim.com.br.	2850	IN	CNAME	pudim.com.br.
+pudim.com.br.		3007	IN	A	54.207.20.104
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: sex out 08 10:31:36 -03 2021
+;; MSG SIZE  rcvd: 75
+
+
+  ----Informaçoes usuario da rede---- 
+
+ 10:33:36 up  2:03,  1 user,  load average: 3,08, 3,54, 2,96
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+adrianwa tty2     tty2             08:33    2:03m  0.02s  0.02s /usr/libexec/gnome-session-binary --systemd --session=ubuntu
+
+ --Teste no host www.pudim.com.br com 6 pacotes-- 
+
+PING pudim.com.br (54.207.20.104) 56(84) bytes of data.
+
+--- pudim.com.br ping statistics ---
+6 packets transmitted, 0 received, 100% packet loss, time 5110ms
+
+
+ --Rota do meu computador até o host www.pudim.com.br- 
+
+traceroute to www.pudim.com.br (54.207.20.104), 30 hops max, 60 byte packets
+ 1  _gateway (10.0.0.1)  0.406 ms  0.441 ms  0.722 ms
+ 2  187-121-192-204.alpha.sta.lancernet.com.br (187.121.192.204)  5.459 ms  5.488 ms  5.462 ms
+ 3  177.71.2-9.sta.lancernet.com.br (177.71.2.9)  5.378 ms  5.280 ms  5.246 ms
+ 4  187-121-200-254.srv.sta.lancernet.com.br (187.121.200.254)  8.710 ms  8.675 ms  8.016 ms
+ 5  as16509.saopaulo.sp.ix.br (187.16.221.99)  9.505 ms  9.415 ms  9.390 ms
+ 6  * * *
+ 7  * * *
+ 8  150.222.70.84 (150.222.70.84)  7.297 ms 150.222.70.114 (150.222.70.114)  9.951 ms 150.222.70.96 (150.222.70.96)  8.185 ms
+ 9  52.93.44.105 (52.93.44.105)  7.896 ms 52.93.44.9 (52.93.44.9)  8.439 ms  8.539 ms
+10  54.240.244.64 (54.240.244.64)  11.241 ms 177.72.240.193 (177.72.240.193)  9.083 ms  9.051 ms
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+
+ --Informações sobre Interfaces de Rede e Endereços IP-- 
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:d2:3b:3d:72  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s25: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.0.177  netmask 255.255.255.0  broadcast 10.0.0.255
+        inet6 fe80::c3bf:c7a8:3eb8:e785  prefixlen 64  scopeid 0x20<link>
+        ether 00:21:cc:73:de:76  txqueuelen 1000  (Ethernet)
+        RX packets 585873  bytes 717219532 (717.2 MB)
+        RX errors 0  dropped 19  overruns 0  frame 0
+        TX packets 164482  bytes 37211703 (37.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 20  memory 0xf2500000-f2520000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 8248  bytes 3271621 (3.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8248  bytes 3271621 (3.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.0.118  netmask 255.255.255.0  broadcast 10.0.0.255
+        inet6 fe80::8a6a:9dd6:3ca6:8a42  prefixlen 64  scopeid 0x20<link>
+        ether 00:24:d7:e7:b1:ec  txqueuelen 1000  (Ethernet)
+        RX packets 7983  bytes 1246251 (1.2 MB)
+        RX errors 0  dropped 28  overruns 0  frame 0
+        TX packets 1491  bytes 212918 (212.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
